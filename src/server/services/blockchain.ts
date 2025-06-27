@@ -633,15 +633,15 @@ class BlockchainService {
 
       const account = await this.server.loadAccount(userAccount.publicKey());
 
-      const balances = account.balances.map((balance) => ({
-        asset:
-          balance.asset_type === "native"
-            ? "XLM"
-            : `${balance.asset_code}:${balance.asset_issuer}`,
-        balance: balance.balance,
-      }));
+   //   const balances = account.balances.map((balance) => ({
+    //    asset:
+      //    balance.asset_type === "native"
+      //     ? "XLM"
+      //    : `${balance.asset_code}:${balance.asset_issuer}`,
+      //  balance: balance.balance,
+    //  }));
 
-      return { balances };
+    //  return { balances };
     } catch (error) {
       logger.error("Failed to get account balance:", error);
       return { balances: [] };
